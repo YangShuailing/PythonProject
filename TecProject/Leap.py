@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-def  leap():
+def  leap(year):
  try:
     year = int(input('请输入年份(如2008):\n'))
  except:
@@ -10,6 +10,5 @@ def  leap():
     print ('%d年是闰年！' % year)
  else:
     print ('%d年不是闰年！' % year)
- return  ### 函数要加 return
+ return
 
-# leap()
