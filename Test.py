@@ -239,7 +239,6 @@
 # print(position)
 # fo.close()
 
-import os
 # 重命名文件test1.txt到test2.txt。
 # fo = open("text1.txt","w")
 # fo.close()
@@ -333,48 +332,67 @@ import os
 # del pt2
 # del pt3
 
-# 继承
-class Parent:        # 定义父类
-   parentAttr = 100
-   def __init__(self):
-      print("调用父类构造函数")
-
-   def parentMethod(self):
-      print('调用父类方法')
-
-   def setAttr(self, attr):
-      Parent.parentAttr = attr
-
-   def getAttr(self):
-      print("父类属性 :", Parent.parentAttr)
-
-class Child(Parent): # 定义子类 class C(A, B):   # 继承类 A 和 B
-   def __init__(self):
-      print("调用子类构造方法")
-
-   def childMethod(self):
-      print('调用子类方法 child method')
-p = Parent
-c = Child()          # 实例化子类
-c.childMethod()      # 调用子类的方法
-c.parentMethod()     # 调用父类方法
-c.setAttr(200)       # 再次调用父类的方法
-c.getAttr()          # 再次调用父类的方法
-print(issubclass(Child,Parent)) #布尔函数如果obj是Class类的实例对象或者是一个Class子类的实例对象则返回true。
+# # 继承
+# class Parent:        # 定义父类
+#    parentAttr = 100
+#    def __init__(self):
+#       print("调用父类构造函数")
+#
+#    def parentMethod(self):
+#       print('调用父类方法')
+#
+#    def setAttr(self, attr):
+#       Parent.parentAttr = attr
+#
+#    def getAttr(self):
+#       print("父类属性 :", Parent.parentAttr)
+#
+# class Child(Parent): # 定义子类 class C(A, B):   # 继承类 A 和 B
+#    def __init__(self):
+#       print("调用子类构造方法")
+#
+#    def childMethod(self):
+#       print('调用子类方法 child method')
+# p = Parent
+# c = Child()          # 实例化子类
+# c.childMethod()      # 调用子类的方法
+# c.parentMethod()     # 调用父类方法
+# c.setAttr(200)       # 再次调用父类的方法
+# c.getAttr()          # 再次调用父类的方法
+# print(issubclass(Child,Parent)) #布尔函数如果obj是Class类的实例对象或者是一个Class子类的实例对象则返回true。
 
 # ##  方法重写
-#
-#
-# class Parent:        # 定义父类
-#    def myMethod(self):
-#       print '调用父类方法'
-#
-# class Child(Parent): # 定义子类
-#    def myMethod(self):
-#       print '调用子类方法'
-#
-# c = Child()          # 子类实例
-# c.myMethod()         # 子类调用重写方法
+'''
+1  __init__ ( self [,args...] )
+构造函数
+简单的调用方法: obj = className(args)
+2	__del__( self )
+析构方法, 删除一个对象
+简单的调用方法 : dell obj
+3	__repr__( self )
+转化为供解释器读取的形式
+简单的调用方法 : repr(obj)
+4	__str__( self )
+用于将值转化为适于人阅读的形式
+简单的调用方法 : str(obj)
+5	__cmp__ ( self, x )
+对象比较
+简单的调用方法 : cmp(obj, x)
+'''
+
+
+class Parent:  # 定义父类
+    def myMethod(self):
+        print('调用父类方法')
+
+
+class Child(Parent):  # 定义子类
+    def myMethod(self):
+        print('调用子类方法')
+
+
+c = Child()  # 子类实例
+c.myMethod()  # 子类调用重写方法
 
 
 #### 正则表达式
