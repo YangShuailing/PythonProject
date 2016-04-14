@@ -545,22 +545,41 @@ rub[ye]	匹配 "ruby" 或 "rube"
 # else:
 #    print("No match!!")
 
-## re.sub用于替换字符串中的匹配项
-"""
-re.I	使匹配对大小写不敏感
-re.L	做本地化识别（locale-aware）匹配
-re.M	多行匹配，影响 ^ 和 $
-re.S	使 . 匹配包括换行在内的所有字符
-re.U	根据Unicode字符集解析字符。这个标志影响 \w, \W, \b, \B.
-re.X	该标志通过给予你更灵活的格式以便你将正则表达式写得更易于理解。
+# ## re.sub用于替换字符串中的匹配项
+# """
+# re.I	使匹配对大小写不敏感
+# re.L	做本地化识别（locale-aware）匹配
+# re.M	多行匹配，影响 ^ 和 $
+# re.S	使 . 匹配包括换行在内的所有字符
+# re.U	根据Unicode字符集解析字符。这个标志影响 \w, \W, \b, \B.
+# re.X	该标志通过给予你更灵活的格式以便你将正则表达式写得更易于理解。
+#
+# """
+# import re
+#
+# phone = "2004-959-559 # This is Phone Number"
+# # Delete Python-style comments
+# num = re.sub(r'#.*$', "", phone)
+# print("Phone Num : ", num)
+# # Remove anything other than digits
+# num = re.sub(r'\D', "", phone)
+# print("Phone Num : ", num)
 
-"""
-import re
+import random
 
-phone = "2004-959-559 # This is Phone Number"
-# Delete Python-style comments
-num = re.sub(r'#.*$', "", phone)
-print("Phone Num : ", num)
-# Remove anything other than digits
-num = re.sub(r'\D', "", phone)
-print("Phone Num : ", num)
+
+def compareNum(num1, num2):
+    if (num1 > num2):
+        return 1
+    elif (num1 == num2):
+        return 0
+    else:
+        return -1
+
+
+for i in range(1, 10):
+    num1 = random.randrange(1, 9, 2)
+    num2 = random.randrange(1, 9, 3)
+    print("num1=", num1)
+    print("num2=", num2)
+    print(compareNum(num1, num2))
