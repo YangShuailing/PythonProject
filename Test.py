@@ -1,3 +1,7 @@
+# -*- coding:UTF-8 -*-  # python 2   中文z
+# !/usr/bin/python # 跨平台
+
+
 # coding=utf-8
 # __author__ = yang
 # print("hello world")
